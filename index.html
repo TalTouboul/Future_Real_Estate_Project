@@ -1,0 +1,591 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Impact Bootstrap Template - Index</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <!-- =======================================================
+    * Template Name: Impact
+    * Updated: May 30 2023 with Bootstrap v5.3.0
+    * Template URL: https://bootstrapmade.com/impact-bootstrap-business-website-template/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+  </head>
+
+  <body>
+
+    <!-- The sign in Modal -->
+    <div class="modal" id="signin-modal">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">כניסה לאיזור האישי</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="mb-1 text-center"><img src="static\img\logo.png" alt="" width="150" height="150"></div>
+              <div class="mb-3 form-group">
+                <input type="email" class="form-control" id="floatingInput" placeholder="אי-מייל" autocomplete="email">
+              </div>
+              <div class="mb-3 input-group">
+                <input type="password" name="password" class="form-control" id="password" placeholder="סיסמא" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,18}$" data-bs-toggle="tooltip" data-bs-placement="right" title="הסיסמא חייבת להכיל לפחות 6-18 תווים, אותיות בלבד ומספרים בלבד." autocomplete="current-password">
+                <button type="button" class="btn btn-toggle-password" data-target="#password">
+                  <i class="bi bi-eye-slash"></i>
+                </button>
+              </div>
+
+              <div class="my-3">
+                <div class="loading">טוען...</div>
+                <div class="error-message"></div>
+              </div>
+              <div class="text-center"><button type="submit">כניסה</button></div>
+              <p class="mt-5 mb-3 text-body-secondary">עדיין לא נרשמת למודל ? 
+                <button type="button" class="justify-content-end btn btn-modal" style="left: 0%;" data-bs-toggle="modal" data-bs-target="#signup-modal">
+                  להרשמה
+                </button>
+              </p>
+            </form>
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">סגירה</button>
+          </div>
+
+        </div>
+      </div>
+    </div> <!-- End of sign in modal -->
+    
+    <!-- The sign up Modal -->
+    <div class="modal" id="signup-modal">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+
+          <!-- Modal Header -->
+          <div class="modal-header justify-content-between">
+            <h4 class="modal-title">הרשמה למודל למידת מכונה</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="mb-1 text-center"><img src="static\img\logo.png" alt="" width="150" height="150"></div>
+              <div class="mb-3 form-group">
+                <input type="text" name="fullName" class="form-control" id="fullName" placeholder="שם מלא" required autocomplete="name">
+              </div>
+              <div class="mb-3 form-group">
+                <input type="email" name="email" class="form-control" id="email" placeholder = "אי-מייל" required autocomplete="email">
+              </div>
+              <div class="mb-3 form-group">
+                <input type="text" name="city" class="form-control" id="city" placeholder="עיר מגורים" required>
+              </div>
+              <div class="mb-3 input-group password-input">
+                <input type="password" name="password" class="form-control" id="password" placeholder="סיסמא" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,18}$" data-bs-toggle="tooltip" data-bs-placement="right" title="הסיסמא חייבת להכיל לפחות 6-18 תווים, אותיות בלבד ומספרים בלבד." autocomplete="new-password">
+                <button type="button" class="btn btn-toggle-password" data-target="#password">
+                  <i class="bi bi-eye-slash"></i>
+                </button>
+              </div>
+              <div class="mb-3 input-group password-input">
+                <input type="password" name="passwordVerification" class="form-control" id="passwordVerification" placeholder="אימות סיסמא" required>
+                <button type="button" class="btn btn-toggle-password" data-target="#passwordVerification">
+                  <i class="bi bi-eye-slash"></i>
+                </button>
+              </div>
+              <div class="my-3">
+                <div class="loading">טוען...</div>
+                <div class="error-message"></div>
+                <div class="sent-message">נרשמת בהצלחה, תודה!</div>
+              </div>
+              <div class="text-center"><button type="submit">הרשמה</button></div>
+            </form>
+            <p class="mt-5 mb-3 text-body-secondary">נרשמת כבר למודל ?
+              <button type="button" class="justify-content-end btn btn-modal" style="left: 0%;" data-bs-toggle="modal" data-bs-target="#signin-modal">
+                כניסה לאיזור האישי
+              </button>
+            </p>
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">סגירה</button>
+          </div>
+
+        </div>
+      </div>
+    </div><!-- End of sign up modal -->
+
+    <!-- ======= Header ======= -->
+  <!--  <section id="topbar" class="topbar d-flex align-items-center">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">contact@example.com</a></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
+        </div>
+        <div class="social-links d-none d-md-flex align-items-center">
+          <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+        </div>
+      </div>
+    </section>-->  
+    <!-- End Top Bar --> 
+
+    <header id="header" class="header d-flex align-items-center header-transparent">
+
+      <div class="container-fluid d-flex justify-content-lg-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <img src="static\img\logo.png" alt="">
+          <h1>מיזם עתיד הנדל"ן<span>.</span></h1>
+        </a>
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a href="#hero">עמוד הבית</a></li>
+            <li><a href="#stats-counter">הרשמה למודל</a></li>
+            <li><a href="#about">אודותינו</a></li>
+            <li><a href="#faq">שאלות נפוצות</a></li>
+            <li><a href="#contact">יצירת קשר</a></li>
+            <li>
+              <button type="button" class="btn btn-warning mobile-nav-toggle" style="left: 0%;" data-bs-toggle="modal" data-bs-target="#signin-modal">
+                לאיזור האישי
+              </button>
+            </li>
+
+          </ul>
+          
+        </nav><!-- .navbar -->
+
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+      </div>
+      
+    </header><!-- End Header -->
+    <!-- End Header -->
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="hero" style="padding-top: 10%;">
+      <div class="video-background">
+        <video autoplay loop muted >
+          <source src="assets\img\video.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="container position-relative">
+        <div class="row gy-5" data-aos="fade-in">
+          <div class="col-lg-4 order-1 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-center">
+            <h2>מיזם עתיד הנדל"ן</h2>
+            <p>הצעד הבא בעולם הנדל"ן הישראלי.</p>
+            <div class="d-flex justify-content-center justify-content-lg-center">
+              <a href="#about" class="btn-get-started">קרא עוד</a>
+              <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox btn-watch-video d-flex align-items-center">
+                <i class="bi bi-play-circle"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="icon-boxes position-relative">
+        <div class="container position-relative">
+          <div class="countdown row gy-4 mt-5" data-aos="fade-up" data-aos-delay="100" data-count="2025/6/3">
+            
+            <div class="col-xl-3 col-md-6">
+              <div class="icon-box">
+                <h3>%s</h3>
+                <h4>שניות</h4>
+              </div>
+            </div><!--End Icon Box -->
+
+            <div class="col-xl-3 col-md-6">
+              <div class="icon-box">
+                <h3>%m</h3>
+                <h4>דקות</h4>
+              </div>
+            </div><!--End Icon Box -->
+
+            <div class="col-xl-3 col-md-6">
+              <div class="icon-box">
+                <h3>%h</h3>
+                <h4>שעות</h4>
+              </div>
+            </div><!--End Icon Box -->
+
+            <div class="col-xl-3 col-md-6">
+              <div class="icon-box">
+                <h3>%d</h3>
+                <h4>ימים</h4>
+              </div>
+            </div><!--End Icon Box -->
+
+          </div>
+        </div>
+      </div>
+
+      </div>
+    </section>
+    <!-- End Hero Section -->
+
+    <main id="main">
+      <!-- ======= Stats Counter Section ======= -->
+      <section id="stats-counter" class="stats-counter" style="padding-top: 10%;">
+          
+        <div class="section-header">
+          <h2>הרשמה למודל למידת מכונה</h2>
+          <p>
+            כאן תוכלו להירשם למודל למידת מכונה, 
+            להוסיף מידע עדכני ואמין שיש לכם/ן ובכך להשפיע על  המודל 
+            וגם לזכות להיות בין הראשונים/ות שישתמשו במודל.
+          </p>
+          <p> נרשמתם כבר למודל ? 
+            <button type="button" class="justify-content-end btn btn-modal" style="left: 0%;" data-bs-toggle="modal" data-bs-target="#signin-modal">
+              כניסה לאיזור האישי
+            </button>
+          </p>
+          <button type="button" class="btn-signup" data-bs-toggle="modal" data-bs-target="#signup-modal"><span><strong>להרשמה </strong></span></button>
+        </div>
+
+        <div class="row gy-4 align-items-center">
+
+          <div class="col-lg-6">
+            <img src="assets/img/stats-img.svg" alt="" class="img-fluid">
+          </div>
+
+          <div class="col-lg-6">
+
+            <div class="stats-item d-flex align-items-center">
+              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>מנויים</strong> נרשמו במערכת למיזם</p>
+            </div><!-- End Stats Item -->
+
+            <div class="stats-item d-flex align-items-center">
+              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>דירות</strong> לוקחות חלק במודל למידת מכונה</p>
+            </div><!-- End Stats Item -->
+
+            <div class="stats-item d-flex align-items-center">
+              <span data-purecounter-start="0" data-purecounter-end="453" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>ערים</strong> שהמודל למידת מכונה מעבד ומפיק מידע עליהן</p>
+            </div><!-- End Stats Item -->
+
+          </div>
+        </div>
+      </section><!-- End Stats Counter Section -->
+      <!-- ======= About Us Section ======= -->
+      <section id="about" class="about" style="padding-top: 10%;">
+        <div class="container" data-aos="fade-up">
+
+          <div class="section-header">
+            <h2>אודותינו</h2>
+            <p>
+              המיזם החל את דרכו ממש לא מזמן בשנת 2022 ומאז מפתח, מעצב ומשפר מודל למידת מכונה לחיזוי מחירי הנדל"ן בארץ.<br> 
+              כל זאת במטרה לסייע לזוגות, משפחות ומשקיעים/ות צעירים/ות בתחילת דרכם לרכישת דירה בארץ. 
+            </p>
+          </div>
+
+          <div class="row gy-4">
+            <div class="col-lg-6">
+              <h3>מביאים את הקדמה והחדשנות לנדל"ן הישראלי</h3>
+              <img src="assets/img/about.jpg" class="img-fluid rounded-4 mb-4" alt="">
+              <p>
+                המיזם מוביל מודל למידת מכונה, היכולות העיקריות של המודל הינן ללמוד, להעמיד ולהבין כמות נתונים גדולה ומאסיבית מאוד 
+                במקרה שלנו זה כמות מידע גדולה על דירות בין 1-5 חדרים בשישים הערים הגדולות בארץ ומתוכן המודל יכול להסיק ולהפיק נתונים עדכניים ואמינים למחירי הדירות בארץ לשנים הקרובות.
+              </p>
+              <p>
+                אך על מנת שהמכונה תוכל להפיק את הנתונים הללו אנו נדרשים לעזרתכם/ן...
+                כל דירה שאתם/ן מכירים/ות ושיש לכם/ן מידע עליה, תוכלו גם אתם/ן לשתף את המודל כדי שנוכל ללמד את המודל על עוד דירות ובכך לשפר את המודל ולהשיג אחוזי דיוק גבוהים יותר.
+              </p>
+            </div>
+            <div class="col-lg-6">
+              <div class="content ps-0 ps-lg-5">
+                <p class="fst-italic">
+                  כמובן שלא תצאו בלי כלום...
+                </p>
+                <ul>
+                  <li><i class="bi bi-check-circle-fill"></i> קבלת 12 נקודות זכות לשימוש במודל על כל דירה שתירשמו.</li>
+                  <li><i class="bi bi-check-circle-fill"></i> כניסה לגרסה המוקדמת של המודל, המאפשרת לכם/ן שימוש במודל לפני כולם.</li>
+                  <li><i class="bi bi-check-circle-fill"></i> ועוד הטבות...</li>
+                </ul>
+                <p>
+                  <i>בסרטון הסבר על המודל למידת מכונה מהמפתח הראשי בצוות הפיתוח של הלמידת מכונה.</i>
+                </p>
+
+                <div class="position-relative mt-4">
+                  <img src="assets/img/about-2.jpg" class="img-fluid rounded-4" alt="">
+                  <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section><!-- End About Us Section -->
+
+     
+
+      <!-- ======= Frequently Asked Questions Section ======= -->
+      <section id="faq" class="faq" style="padding-top: 10%;">
+        <div class="container" data-aos="fade-up">
+
+          <div class="row gy-4">
+
+            <div class="col-lg-4">
+              <div class="content px-xl-5">
+                <h3><strong>שאלות</strong> נפוצות ששואלים אותנו </h3>
+                <p>
+                  כאן נענה על שאלות שמשתמשים לרוב שואלים אותנו, לשאלות נוספות תוכלו להשאיר לנו פנייה לאי-מייל ונחזור אליכם בהקדם.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-8">
+
+              <div class="accordion accordion-flush" id="faqlist" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1">
+                      <span class="num">1.</span>
+                      איך אני יכול לדעת שהמידע שאני משתף איתכם נשמר בצורה מאובטחת?
+                    </button>
+                  </h3>
+                  <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                    <div class="accordion-body">
+                      כל המידע שנאסף לטובת המיזם נשמר בענן מאובטח של אמזון
+                      והשימוש במידע נעשה אך ורק לצורכי המודל למידת מכונה
+                      בלבד כפי שמפורט בתקנון התנאים המשפטים.
+                  </div>
+                </div><!-- # Faq item-->
+
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2">
+                      <span class="num">2.</span>
+                      תוך כמה זמן המיזם יצא לשוק הרחב ונוכל להשתמש בו?
+                    </button>
+                  </h3>
+                  <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                    <div class="accordion-body">
+                      אין לנו תשובה חד משמעית מהסיבה שזה תלוי בשיתוף הפעולה של הקהל הרחב
+                      ככל שיותר אנשים יהיו פעילים במיזם וישתפו פעולה כך נוכל להוציא את המודל לקהל הרחב יותר מהר,
+                      עם זאת  אנחנו מאמינים שעד 3.2024 המודל יצא לקהל הרחב.
+                    </div>
+                  </div>
+                </div><!-- # Faq item-->
+
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3">
+                      <span class="num">3.</span>
+                      איך באמת אפשר להאמין שהמודל יודע לנחש את המחיר של דירה כלשהי בעוד כמה שנים?
+                    </button>
+                  </h3>
+                  <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                    <div class="accordion-body">
+                      נתחיל ונאמר שהמודל לא "מנחש" המודל
+                      לומד הרבה נתונים ומידע החל ממאפיינים של כל דירה,
+                      עסקאות אחרונות שבוצעו בדירה ובאיזור
+                      בכלל ומצב המשק הישראלי והעולמי ובעזרת הלמידה והעמקה בנתונים המודל 
+                      מבצע חישובים הסתברותיים ויודע לחזות את מחירי הנדל"ן בישראל,
+                      נוסיף כי אנו בוחנים את המודל 
+                      כל הזמן ומוודאים שאין סטיות וחריגות כלשהן ושתוצאות המודל באמת מדוייקות.
+                    </div>
+                  </div>
+                </div> <!-- # Faq item-->
+
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-4">
+                      <span class="num">4.</span>
+                      Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?
+                    </button>
+                  </h3>
+                  <div id="faq-content-4" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                    <div class="accordion-body">
+                      Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                    </div>
+                  </div>
+                </div><!-- # Faq item-->
+
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-5">
+                      <span class="num">5.</span>
+                      Tempus quam pellentesque nec nam aliquam sem et tortor consequat?
+                    </button>
+                  </h3>
+                  <div id="faq-content-5" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                    <div class="accordion-body">
+                      Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
+                    </div>
+                  </div>
+                </div><!-- # Faq item-->
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section><!-- End Frequently Asked Questions Section -->
+
+      <!-- ======= Contact Section ======= -->
+      <section id="contact" class="contact" style="padding-top: 10%;">
+        <div class="container" data-aos="fade-up">
+
+          <div class="section-header">
+            <h2>יצירת קשר</h2>
+            <p>אנו רוצים לשמוע מכם/ן עוד, לכל שאלה ו/או משוב שיש לכם/ן נשמח לקבל מכם/ן פנייה לאי-מייל שלנו.</p>
+          </div>
+
+          <div class="row gx-lg-0 gy-4">
+
+            <div class="col-lg-2">
+
+              <div class="info-container d-flex flex-column align-items-center justify-content-center"></div>
+
+            </div>
+
+            <div class="col-lg-10">
+              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <input type="text" name="name" class="form-control" id="name" placeholder="שם מלא" required>
+                  </div>
+                  <div class="col-md-6 form-group mt-3 mt-md-0">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="אי-מייל" required>
+                  </div>
+                </div>
+                <div class="form-group mt-3">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="נושא הפנייה" required>
+                </div>
+                <div class="form-group mt-3">
+                  <textarea class="form-control" name="message" rows="7" placeholder="הודעת טקסט" required></textarea>
+                </div>
+                <div class="my-3">
+                  <div class="loading">טוען...</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">הודעתך נשלחה בהצלחה, תודה!</div>
+                </div>
+                <div class="text-center"><button type="submit">שלח הודעה</button></div>
+              </form>
+            </div><!-- End Contact Form -->
+
+          </div>
+
+        </div>
+      </section><!-- End Contact Section -->
+
+    </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
+
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-5 col-md-12 footer-info">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <span>מיזם עתיד הנדל"ן</span>
+            </a>
+            <p>לוקחים את הנדל"ן בישראל צעד קדימה</p>
+            <div class="social-links d-flex mt-4">
+              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>קישורים</h4>
+            <ul>
+              <li><a href="#hero">עמוד הבית</a></li>
+            <li><a href="#about">אודותינו</a></li>
+            <li><a href="#stats-counter">הרשמה למודל</a></li>
+            <li><a href="#faq">שאלות נפוצות</a></li>
+            <li><a href="#contact">יצירת קשר</a></li>
+              <li><a href="#">תנאי שימוש</a></li>
+              <li><a href="#">תנאים משפטיים</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-end">
+            <h4>צור קשר</h4>
+            <p>
+              <strong>מיקום: </strong> אשדוד, ישראל <br>
+              <strong>אי-מייל: </strong> info@example.com<br>
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="container mt-4">
+        <div class="copyright">
+          &copy; Copyright <strong><span>מיזם עתיד הנדל"ן</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/impact-bootstrap-business-website-template/ -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+
+    </footer><!-- End Footer -->
+    <!-- End Footer -->
+
+    <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+  </body>
+
+</html>

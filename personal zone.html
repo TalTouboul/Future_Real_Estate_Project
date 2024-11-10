@@ -1,0 +1,590 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>[Template] Sample Inner Page</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <!-- =======================================================
+    * Template Name: Impact
+    * Updated: May 30 2023 with Bootstrap v5.3.0
+    * Template URL: https://bootstrapmade.com/impact-bootstrap-business-website-template/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+  </head>
+
+  <body>
+
+    <!-- ======= Header ======= -->
+
+    <header id="header" class="header d-flex align-items-center">
+
+      <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.png" alt=""> -->
+          <h1>Impact<span>.</span></h1>
+        </a>
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+              <ul>
+                <li><a href="#">Drop Down 1</a></li>
+                <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                  <ul>
+                    <li><a href="#">Deep Drop Down 1</a></li>
+                    <li><a href="#">Deep Drop Down 2</a></li>
+                    <li><a href="#">Deep Drop Down 3</a></li>
+                    <li><a href="#">Deep Drop Down 4</a></li>
+                    <li><a href="#">Deep Drop Down 5</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Drop Down 2</a></li>
+                <li><a href="#">Drop Down 3</a></li>
+                <li><a href="#">Drop Down 4</a></li>
+              </ul>
+            </li>
+            <li><a href="#contact">האיזור האישי</a></li>
+          </ul>
+        </nav><!-- .navbar -->
+
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+      </div>
+    </header><!-- End Header -->
+    <!-- End Header -->
+
+    <main id="main">
+
+      <!-- ======= Breadcrumbs ======= -->
+      <div class="breadcrumbs">
+        <div class="page-header d-flex align-items-center" style="background-image: url('');">
+          <div class="container position-relative">
+            <div class="row d-flex justify-content-center">
+              <div class="col-lg-6 text-center">
+                <h2>Sample Inner Page</h2>
+                <p>Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav>
+          <div class="container">
+            <ol>
+              <li><a href="index.html">Home</a></li>
+              <li>Sample Inner Page</li>
+            </ol>
+          </div>
+        </nav>
+      </div><!-- End Breadcrumbs -->
+
+      <!-- ======= Contact Section ======= -->
+      <section id="tab" class="tab">
+        <div class="container" data-aos="fade-up">
+
+          <div class="section-header">
+            <h2>האיזור האישי</h2>
+          </div>
+
+          <div class="accordion" id="accordionPersonalZone">
+            <div id="accordion-personal-details" class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  <i class="icon bi bi-person-circle flex-shrink-0"></i> פרטים אישיים 
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                    <div class="mb-3 form-group">
+                      <input type="text" name="fullName" class="form-control form-control" id="fullName" placeholder="שם מלא" required>
+                    </div>
+                    <div class="mb-3 form-group">
+                      <input type="email" name="email" class="form-control" id="email" placeholder = "אי-מייל" required>
+                    </div>
+                    <div class="mb-3 form-group">
+                      <input type="text" name="city" class="form-control" id="city" placeholder="עיר מגורים" required>
+                    </div>
+                  </form>
+                  <button id="btn-edit0" class="btn btn-primary" style="width: 100%;" type="button" onclick="editApartmentsForm('accordion-personal-details', 0)">שמירה</button>  
+                </div>
+              </div>
+            </div><!-- End personal-zone Form -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  <i class="icon bi bi-houses-fill flex-shrink-0"></i> דירות ששיתפתי 
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionPersonalZone">
+                <div class="accordion-body">
+                  <div class="accordion" id="accordionExample">
+                    <!-- Existing accordion items -->
+                    
+                  </div> <!-- end of apartments accordion -->
+                  <!-- Add button to add new item -->
+                  <button class="btn btn-success mt-3" style="width: 100%;" onclick="addNewItem()">הוסף דירה חדשה</button>
+                </div>
+              </div>
+            </div><!-- End apartments info Form -->
+          </div>
+
+        </div>
+        
+      </section><!-- End Contact Section -->
+    </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
+
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-5 col-md-12 footer-info">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <span>Impact</span>
+            </a>
+            <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+            <div class="social-links d-flex mt-4">
+              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Terms of service</a></li>
+              <li><a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><a href="#">Web Design</a></li>
+              <li><a href="#">Web Development</a></li>
+              <li><a href="#">Product Management</a></li>
+              <li><a href="#">Marketing</a></li>
+              <li><a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+            <h4>Contact Us</h4>
+            <p>
+              A108 Adam Street <br>
+              New York, NY 535022<br>
+              United States <br><br>
+              <strong>Phone:</strong> +1 5589 55488 55<br>
+              <strong>Email:</strong> info@example.com<br>
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="container mt-4">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Impact</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/impact-bootstrap-business-website-template/ -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+
+    </footer><!-- End Footer -->
+    <!-- End Footer -->
+
+    <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+  </body>
+  <script>
+    /**
+   * toggle for the view text input of each apartment
+   */
+    function toggleTextInput(itemID) {
+      var corr_item = document.querySelector("#"+itemID);
+      var viewOption1 = corr_item.querySelector('#view1');
+      var viewOption2 = corr_item.querySelector('#view2');
+      var viewTextInput = corr_item.querySelector('#viewTextInput');
+      if (viewOption1.checked) {viewTextInput.disabled = false;}
+      else if (viewOption2.checked) {viewTextInput.disabled = true;}
+      else {viewTextInput.disabled = false;}
+    }
+    
+
+    function confirmDelete(itemId) {
+      if (confirm("Are you sure you want to delete this item?")) {
+        // Delete logic here
+        item = document.getElementById(itemId)
+        item.remove()
+        console.log("Item " + itemId + " deleted");
+      }
+    }
+    
+    function enableEdit(itemId, abled_value) {
+      var acc_item = document.getElementById(itemId)
+      var textareas = acc_item.querySelectorAll("textarea");
+      var inputs = acc_item.querySelectorAll("input");
+      var selects = acc_item.querySelectorAll("select");
+      if (abled_value == 1) {
+        inputs.forEach(function(input) {input.disabled = false;});
+        selects.forEach(function(select) {select.disabled = false;});
+        var viewOption1 = acc_item.querySelector('#view1');
+        if (viewOption1.checked) {textareas.forEach(function(textarea) {textarea.disabled = false;});} 
+      }
+      else {
+        textareas.forEach(function(textarea) {textarea.disabled = true;});
+        inputs.forEach(function(input) {input.disabled = true;});
+        selects.forEach(function(select) {select.disabled = true;});
+      }
+    }
+    function editApartmentsForm(itemID, id_value){
+      var edit_button = document.getElementById(`btn-edit${id_value}`)
+      if (edit_button.innerHTML == 'עריכה')
+      {
+        edit_button.innerHTML = 'שמירה';
+        edit_button.classList.remove("btn-warning");
+        edit_button.classList.add("btn-primary");
+        enableEdit(itemID, 1);
+      }
+      else {
+        edit_button.innerHTML = 'עריכה';
+        edit_button.classList.remove("btn-primary");
+        edit_button.classList.add("btn-warning");
+        enableEdit(itemID, 0);
+      }
+    
+    }
+
+
+    var newItemIndex = 0;
+
+    function addNewItem() {
+      newItemIndex++;
+
+      // Create the new elements
+      var accordionItem = document.createElement('div');
+      accordionItem.className = 'accordion-item';
+      accordionItem.id = 'newItem' + newItemIndex;
+     
+
+      var accordionHeader = document.createElement('h2');
+      accordionHeader.className = 'accordion-header';
+      accordionHeader.id = 'newHeading' + newItemIndex;
+      accordionHeader.setAttribute('style', "color: var(--color-primary); background-color: var(--color-secondary);");
+
+      var accordionButton = document.createElement('button');
+      accordionButton.className = 'accordion-button collapsed';
+      accordionButton.type = 'button';
+      accordionButton.setAttribute('data-bs-toggle', 'collapse');
+      accordionButton.setAttribute('data-bs-target', '#newCollapse' + newItemIndex);
+      accordionButton.setAttribute('aria-expanded', 'true');
+      accordionButton.setAttribute('aria-controls', 'newCollapse' + newItemIndex);
+      accordionButton.setAttribute('style', "color: var(--color-primary); background-color: var(--color-secondary);");
+      accordionButton.textContent = 'דירה חדשה';
+
+      var accordionCollapse = document.createElement('div');
+      accordionCollapse.id = 'newCollapse' + newItemIndex;
+      accordionCollapse.className = 'accordion-collapse collapse';
+      accordionCollapse.setAttribute('aria-labelledby', 'newHeading' + newItemIndex);
+      accordionCollapse.setAttribute('data-bs-parent', '#accordionExample');
+
+      var accordionBody = document.createElement('div');
+      accordionBody.className = 'accordion-body';
+
+      // Append the form elements to the accordion body
+      accordionBody.innerHTML = `
+          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                <div class="row mb-3">
+                  <div class="col-md-3 form-group">
+                    <input type="text" name="city" class="form-control form-control" id="city" placeholder="עיר" required >
+                  </div>
+                  <div class="col-md-3 form-group">
+                    <input type="text" name="neighborhood" class="form-control" id="neighborhood" placeholder="שכונה/רובע" required >
+                  </div>
+                  <div class="col-md-3 form-group">
+                    <input type="text" name="street" class="form-control" id="street" placeholder="רחוב" required >
+                  </div>
+                  <div class="col-md-3 form-group">
+                    <input type="number" name="houseNumber" class="form-control" id="houseNumber" placeholder="מספר בניין" required >
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-md-3 form-group">
+                    <input type="number" name="floors" class="form-control" id="floors" placeholder="קומה בבניין" required >
+                  </div>
+                  <div class="col-md-3 form-group">
+                    <input type="number" name="floorsInBuilding" class="form-control" id="floorsInBuilding" placeholder="מספר קומות בבניין" required >
+                  </div>
+                  <div class="col-md-3 form-group">
+                    <input type="number" name="size" class="form-control" id="size" placeholder='גודל הדירה במ"ר' required >
+                  </div>
+                  <div class="col-md-3 form-group">
+                    <input type="number" name="parkings" class="form-control" id="parkings" placeholder="מספר חניות" required >
+                  </div>
+                </div>
+                <div class="input-group mb-3">
+                  <label class="input-group-text" for="terraces">מרפסות</label>
+                  <select class="form-select" id="terraces" required >
+                    <option selected>בחר</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                  </select>
+                </div>
+                <div class="input-group mb-3">
+                  <label class="input-group-text" for="elevators">מעליות</label>
+                  <select class="form-select" id="elevators" required >
+                    <option selected>בחר</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                  </select>
+                </div>
+                <div class="input-group mb-3">
+                  <label class="input-group-text" for="status">מצב הדירה</label>
+                  <select class="form-select" id="status" required >
+                    <option selected>בחר</option>
+                    <option value="דרוש שיפוץ">דרוש שיפוצים בדירה</option>
+                    <option value="שמור">הדירה שמורה</option>
+                    <option value="משופץ">הדירה משופצת</option>
+                    <option value="חדש">דירה חדשה</option>
+                  </select>
+                </div>
+                <div class="input-group mb-3">
+                  <label class="input-group-text" for="timeEnter">זמן כניסה לדירה</label>
+                  <select class="form-select" id="timeEnter" required >
+                    <option selected>בחר</option>
+                    <option value='כניסה מיידית'>כניסה מיידית</option>
+                    <option value='כניסה גמישה'>כניסה גמישה</option>
+                    <option value="כניסה לא גמישה">כניסה מעל חצי שנה</option>
+                  </select>
+                </div>
+                <div class="input-group mb-3">
+                  <label class="input-group-text" for="storages">כמה מחסנים יש בדירה?</label>
+                  <select class="form-select" id="storages" required >
+                    <option selected>בחר</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                  </select>
+                </div>
+
+                <div class="input-group mb-3">
+                  <label class="input-group-text" id="aircondition">האם יש בדירה מזגן מיני מרכזי?</label>
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label" for="aircondition1">כן</label>
+                    <input class="form-check-input" type="radio" name="aircondition" id="aircondition1" value="1" >
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label" for="aircondition2">לא</label>
+                    <input class="form-check-input" type="radio" name="aircondition" id="aircondition2" value="0" >
+                  </div>
+                </div>
+                <div class="input-group mb-3">
+                  <label class="input-group-text" id="bars">יש בדירה סוגרים בחלונות?</label>
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label" for="bars1">כן</label>
+                    <input class="form-check-input" type="radio" name="bars" id="bars1" value="1" >
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label" for="bars2">לא</label>
+                    <input class="form-check-input" type="radio" name="bars" id="bars2" value="0" >
+                  </div>
+                </div>
+                <div class="input-group mb-3">
+                  <label class="input-group-text" id="water-header"> יש דוד שמש או דוד גז בדירה?</label>
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label" for="water-header1">כן</label>
+                    <input class="form-check-input" type="radio" name="water-header" id="water-header1" value="1" >
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label" for="water-header2">לא</label>
+                    <input class="form-check-input" type="radio" name="water-header" id="water-header2" value="0" >
+                  </div>
+                </div>
+                <div class="input-group mb-3">
+                  <label class="input-group-text" id="accessibility">הדירה והבניין נגישים לנכים?</label>
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label" for="accessibility1">כן</label>
+                    <input class="form-check-input" type="radio" name="accessibility" id="accessibility1" value="1" >
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label" for="accessibility2">לא</label>
+                    <input class="form-check-input" type="radio" name="accessibility" id="accessibility2" value="0" >
+                  </div>
+                </div>
+                <div class="input-group mb-3">
+                  <label class="input-group-text" id="shelters">יש ממ"ד בדירה?</label>
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label" for="shelter1">כן</label>
+                    <input class="form-check-input" type="radio" name="shelters" id="shelter1" value="1" >
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label" for="shelter2">לא</label>
+                    <input class="form-check-input" type="radio" name="shelters" id="shelter2" value="0" >
+                  </div>
+                </div>
+                <div class="input-group mb-3">
+                  <label class="input-group-text" id="renovated">הדירה עברה שיפוץ?</label>
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label" for="renovated1">כן</label>
+                    <input class="form-check-input" type="radio" name="renovated" id="renovated1" value="1" >
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label" for="renovated2">לא</label>
+                    <input class="form-check-input" type="radio" name="renovated" id="renovated2" value="0" >
+                  </div>
+                </div>
+                <div class="input-group mb-3">
+                  <label class="input-group-text" id="tadiran">יש מזגן בכל חדר?</label>
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label" for="tadiran1">כן</label>
+                    <input class="form-check-input" type="radio" name="tadiran" id="tadiran1" value="1" >
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label" for="tadiran2">לא</label>
+                    <input class="form-check-input" type="radio" name="tadiran" id="tadiran2" value="0" >
+                  </div>
+                </div>
+                <div class="input-group mb-3">
+                  <label class="input-group-text" id="furnitures">הדירה תימכר/נמכרת מרוהטת?</label>
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label" for="furniture1">כן</label>
+                    <input class="form-check-input" type="radio" name="furnitures" id="furniture1" value="1" >
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label" for="furniture2">לא</label>
+                    <input class="form-check-input" type="radio" name="furnitures" id="furniture2" value="0" > 
+                  </div>
+                </div>
+                <div class="input-group mb-3">
+                  <label class="input-group-text" id="sukka">יש לדירה מרפסת סוכה?</label>
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label" for="sukka1">כן</label>
+                    <input class="form-check-input" type="radio" name="sukka" id="sukka1" value="1" >
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label" for="sukka2">לא</label>
+                    <input class="form-check-input" type="radio" name="sukka" id="sukka2" value="0" >
+                  </div>
+                </div>
+                <div class="input-group mb-3">
+                  <label class="input-group-text" id="tabu">הדירה רשומה בטאבו?</label>
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label" for="tabu1">כן</label>
+                    <input class="form-check-input" type="radio" name="tabu" id="tabu1" value="1" >
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label" for="tabu2">לא</label>
+                    <input class="form-check-input" type="radio" name="tabu" id="tabu2" value="0" >
+                  </div>
+                </div>
+                <div class="input-group mb-3">
+                  <label class="input-group-text" id="view">הדירה משקיפה לנוף?</label>
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label" for="view1">כן</label>
+                    <input class="form-check-input" type="radio" name="view" id="view1" value="1"  onclick="toggleTextInput('newItem${newItemIndex}')" >
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label" for="view2">לא</label>
+                    <input class="form-check-input" type="radio" name="view" id="view2" value="0" onclick="toggleTextInput('newItem${newItemIndex}')" > 
+                  </div>
+                </div>
+                <div class="form-group mb-3">
+                  <textarea id="viewTextInput" class="form-control" name="viewTextInput" rows="3" placeholder="במידה וכן פרט על הנוף שאליה משקיפה הדירה" disabled></textarea>
+                </div>
+
+
+                <div class="my-3">
+                  <div class="loading">טוען...</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">הודעתך נשלחה בהצלחה, תודה!</div>
+                </div>
+
+          <div class="d-grid gap-2">
+            <button id="btn-edit${newItemIndex}" class="btn btn-primary" type="button" onclick="editApartmentsForm('newItem${newItemIndex}', ${newItemIndex})">שמירה</button>
+            <button class="btn btn-danger" type="button" onclick="confirmDelete('newItem${newItemIndex}')">מחיקה</button>
+            
+          </div>
+
+        </form>
+      `;
+
+      // Append the elements to the accordion
+      accordionHeader.appendChild(accordionButton);
+      accordionCollapse.appendChild(accordionBody);
+      accordionItem.appendChild(accordionHeader);
+      accordionItem.appendChild(accordionCollapse);
+
+      // Append the new accordion item to the accordion container
+      var accordion = document.getElementById('accordionExample');
+      accordion.appendChild(accordionItem);
+    }
+  </script>
+
+</html>
